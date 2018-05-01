@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.handeoktay.pollyfysunum.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="#FFF"
+                    android:text="Graph View"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFF"
+                    android:text="This view shows the graph of input data. You can scroll horizontally to see values on nodes."
+                    android:layout_height="wrap_content" />
+
+                <com.handeoktay.pollyfysunum.components.Graph
+                    android:id="@+id/Graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="#FFF"
+                    android:text="Filter View"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFF"
+                    android:text="This view allows you to select multiple options from an array of strings. Also you can search in options. "
+                    android:layout_height="wrap_content" />
+
+                <com.handeoktay.pollyfysunum.components.FilterView
+                    android:id="@+id/filterButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+
+        <com.handeoktay.pollyfysunum.components.MultipleSelectView
+            android:id="@+id/MultipleSelectView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</layout>
